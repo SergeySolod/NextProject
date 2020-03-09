@@ -4,9 +4,9 @@ export default function Index() {
     return (
         <div>
             <Link href="/about">
-                <a>About Page</a>
+                <a>Страница о нас</a>
             </Link>
-            <p>Hello Next.js</p>
+            <p>Привет, Next.js</p>
         </div>
     );
 }
