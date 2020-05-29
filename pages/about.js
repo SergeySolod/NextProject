@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {compose} from "redux";
 import {connect} from 'react-redux'
+import {requestCities} from "../store/reducers/cities-reducer";
 
 const About = (props) => {
-    console.log(props)
+    useEffect(() => {
+        props.requestCities();
+    }, []);
+    console.log(props.cities)
     return (
         <div>
-            <p>{props.isFalse}</p>
+            <p>asdasdas</p>
         </div>
     );
 }
@@ -14,11 +18,11 @@ const About = (props) => {
 let mapStateToProps = (state) => {
     return (
         {
-            isFalse: state.cities.isFetching
+            cities: state.cities.cities
         }
     )
 }
 
 export default compose(
-    connect(mapStateToProps, {})
+    connect(mapStateToProps, {requestCities})
 )(About);

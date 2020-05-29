@@ -5,7 +5,7 @@ const TOGGLE_IS_FETCHING_USERS = 'foodle/cities-reducer/TOGGLE_IS_FETCHING_USERS
 
 let initialState = {
     cities: [],
-    isFetching: 'Hello, i am from reducer!!',
+    isFetching: false
 }
 
 const restaurantsCities = (state = initialState, action) => {
